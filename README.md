@@ -66,7 +66,34 @@ If probability of bit error pb is acceptable, rates up to R(pb) are achievable, 
 
 R(pb) = C / 1 (1 - H(pb))
 
+Where H() is the binary entropy function
+
 For any pb, rates greate than R(pb) are not achievable
 
 ### Day 2 notes
+
+#### Bayes theorem
+
+Given two random var, x and y and some output xi (i=1,2,3, ..., n) and yi
+
+P(X/Y) = P(Y/X)*P(X) / P(Y) = P(X,Y)/P(Y)
+
+#### Entropy
+
+let x be a random variable with output xi (i from 1 to n) with probability p(xi),
+
+entropy (bits) (certainty of information) H(X) = Sum (i from 1 to n) p(xi)*log2(1/p(xi))
+
+In binary outputs, maximum entropy is 1 achieve at p = 0.5
+
+Joint entropy
+H(X,Y) = Sum (i from 1 to n) p(xi,yi)*log2(1/p(xi,yi))
+
+Conditional entropy
+
+H(X|Y) = Sum (i from 1 to n) p(yi)*H(X|Y=yi)
+
+H(X|Y=ym) = Sum (i from 1 to n) p(X=xi | Y=ym)*log2(1/p(X=xi | Y=ym))
+
+####
 ### Day 3 notes
