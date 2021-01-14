@@ -95,5 +95,22 @@ H(X|Y) = Sum (i from 1 to n) p(yi)*H(X|Y=yi)
 
 H(X|Y=ym) = Sum (i from 1 to n) p(X=xi | Y=ym)*log2(1/p(X=xi | Y=ym))
 
-####
+## Week 2
+
 ### Day 3 notes
+
+#### Mutual Information I(X,Y)
+
+Let X and Y be two random variables, the mutual information is defined as:
+
+I(X,y) = H(X) - H(X/Y) = H(Y) - H(Y/X)
+
+I(X,Y) is the cross section of a venn diagram displaying H(X) and H(Y)
+
+#### Relative entropy
+
+Given two probabilities mass functions:
+
+D(p || q) = Sum (i from 1 to n) p(n)log(p(x)/q(x)) always greater than or equal 0
+
+#### Source coding
