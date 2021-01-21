@@ -97,7 +97,7 @@ H(X|Y=ym) = Sum (i from 1 to n) p(X=xi | Y=ym)*log2(1/p(X=xi | Y=ym))
 
 ## Week 2
 
-### Day 3 notes
+### Day 1 notes
 
 #### Mutual Information I(X,Y)
 
@@ -114,3 +114,29 @@ Given two probabilities mass functions:
 D(p || q) = Sum (i from 1 to n) p(n)log(p(x)/q(x)) always greater than or equal 0
 
 #### Source coding
+
+
+## Week 3
+
+### Day 1 notes
+
+#### Huffman's encoding (Optimal encoding)
+
+Subsequently construct a tree by combining two least probable character probability to create superset of character in binary form as a new root for those characters
+
+#### D-ary Huffman's encoding
+For D= {0,1,2,3, ... D-1}, every internal node must have out degree of D-1
+
+The number of leaf nodes N congruence 1 mod (D-1)
+
+Hint: use optimal proof in lecture video for Q4
+
+#### Optimal code
+
+Given Pi Pj for character Xi and Xj, average length of code for X i and Xj, denoted Li and Lj
+
+If Pi <= Pj, Li <= Lj
+
+The two longest code word must have the same length
+
+The two longest code word must differ only in the least significant bits
