@@ -140,3 +140,39 @@ If Pi <= Pj, Li <= Lj
 The two longest code word must have the same length
 
 The two longest code word must differ only in the least significant bits
+Encoding at the source before sending
+
+### Day 4 notes
+
+#### Source coding cont.
+
+Given coding scheme C, the following property exists:
+Non-singular
+xi != xj => C(xi) != C(xj)
+
+Extension:
+C(xi xj) = C(xi)C(xj)
+
+Uniquely decodable code: the extension must also be non-singular
+
+Prefix code:
+One code word cannot be prefix of another one
+
+Instantaneous:
+Can be decode immediately without waiting for the whole string
+
+#### Kraft's inequality
+Given list of character D = {0,1,2,..D-1}
+sum from i=1 to n of 1/D^li <= 1
+
+Use to test if given codes is prefix codes
+
+
+given character x1 -> xi with probability p1 -> pi encode to length l1 -> li
+Sum from i=1 to n of Pi * li >= H(X) (entropy of probabilty of characters)
+Average length of code must always be greater than entropy
+#### Shannon - Fano encoding
+
+X        Y        Z         characters
+P1       P2       P3        probabilities
+log1/P1  log1/P2  log1/p3   length
