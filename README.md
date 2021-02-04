@@ -176,3 +176,69 @@ Average length of code must always be greater than entropy
 X        Y        Z         characters
 P1       P2       P3        probabilities
 log1/P1  log1/P2  log1/p3   length
+
+## Week 5
+
+### Day 1 notes
+#### Hamming code
+
+Single error correcting, double error detecting (SECDEC)
+length n = 2^r -1
+number of check bits = r
+
+
+
+#### Hamming distance
+Hamming distance d(x,y) between two n-tuples is the number of positions they differ:
+X=11010
+Y=01001
+=> D(X,Y) = 3
+
+Properties of distance (vector):
+* D(X,Y) >= 0
+* D(X,Y) = D(Y,X)
+* D(X,Y) + D(Y,Z) >= D(X,Z)
+Min distance of a code:
+Min of every pair of code in a set of possible code word
+
+1. A code C is capable of detecting t errors if and only if the min Hamming distance of code is t+1 (always possible to find this code too)
+2. A code C is capable of correcting t-errors if and only if the min Hamming distance is 2t + 1
+3. A code C is capable of correcting t-errors and simultaneously detect d>= t errors if and only if the min distance of the code is t+d+1
+
+### Day 2 notes
+#### Sphere packing bound
+|C| <= 2^n/(1+(nC1)+(nC2)+(nC3)+...(nCt))
+for n is the length of bits and t is the number of possible error correction
+
+#### t-error correcting code
+Correct up to t errors
+
+### introduction to algebra
+
+#### group
+
+Group(G,*) where G is a set of elements, * are binary operator
+Properties:
+1. Closures: forall a, b in G, a*b must be in g
+2. Associative: (a\*b)\*c = a\*(b\*c)
+3. Identity: there must exist a element I in G such that  a + I = I + a
+4. Inverse: exist an element where a^ where a\*a^ = a^*a = I
+5. Communicative (optional): a\*b = b\*a, if satisfy go to abelian group
+
+#### subgroup
+subgroup H of a group G is the subset of element in G that satisfy all properties of said group
+number of elements in a subgroup always divides the number of elements in the group
+
+#### coset
+coset of subgroup H is any set express-able as a + H
+
+#### Field
+Field(F,+,*)
+
+1. (F,+) must be a abelian group
+2. (F-{I},*) abelian group
+3. Distributive: a(b+c) = ab + ac
+
+#### Galois Field
+
+Can do addition, subtraction, multiplication and division
