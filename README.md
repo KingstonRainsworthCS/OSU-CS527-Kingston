@@ -242,3 +242,25 @@ Field(F,+,*)
 #### Galois Field
 
 Can do addition, subtraction, multiplication and division
+
+## Week 6
+
+### Homework hints
+1. Hamming code examples
+2. Erasure error: 000 -> 0*0
+3. Same with 2, now also correct a normal error. If distance is 2t +1 we can do t error correction
+4. Use picture, triangle inequalities, N(X,Y) >= t+1, look at N(X,X1) N(Y,Y1)
+5. Assymetric (error is always  all + or - from original at every bits) of magnitude l (+-l), use same principle as 4.
+6. singular is possible by parity bits, two error detect via  parity on row or column, miss-corrected at 3 when all 3 are in a grid shape, divide by C(m*n,3)
+7. kinda obvious after looking into cross parity
+
+#### Vector space
+1. (V,+) over field (F,+,*) form an abelian group
+2. For any a in F and any V in V, a.v is in V
+
+A sets of vectors is called linearly independent if a1v1 + a2v2  ... + akvk = 0 implies a1 a2 ... ak = 0
+A sets of vectors is said to span a vector space V if any u in V can be written as u = a1v1 + a2v2 + ... + akvk
+Every vector space have at least one set of vector that span the space. This is the basis
+The number of elements in the basis is called the dimension of the vector space
+Two vector are orthogonal if inner product v.u = 0
+Dual space: all vector is orthogonal to all vectors of another subspace
