@@ -264,3 +264,34 @@ Every vector space have at least one set of vector that span the space. This is 
 The number of elements in the basis is called the dimension of the vector space
 Two vector are orthogonal if inner product v.u = 0
 Dual space: all vector is orthogonal to all vectors of another subspace
+
+### Linear codes:
+Subspace of a vector space
+Given space V with dimension n
+and subspace S with dimension k
+=> There is a basis of k-elements {g1,g2,gk}
+The code word is the space of which the S subspace span, thus it can be express as a1g1 + a2g2 + ... + akgk
+min distance of the code is the min weight of the non zero code word.
+
+In general, given basis of a subspace [g1,g2,g3,...,gk] and the information bits (a1,a2,a3,...,ak), the code can be generate as the product between the two vectors
+
+Given a certain basis, the first k bits of the code word would be thsame as a1a2a3ak
+This basis have the form of [Identity(k x k), parity (k x r)], where k is the info bits and r is the parity bits
+This form is call Echelon Canonical Form
+To achieve this form from any given :
+1. add rows
+2. exchange the columns
+Within this form, the resulting code is call:
+
+### Systematic code
+
+The information bit can be separate from the check bits
+
+### Linear code from dual code point of view
+Given the orthogonal space S' to S above with dimension n-k = r
+We can build R linearly independent vectors that spans V (basis of orthogonal space S')
+
+If you have code word with 1s in i1,i2,is, positions of the linear combination of the columns corresponding to i1 i2 is in H must be 0
+You can derive code word by reverse this process
+
+Suppose we choose an H-matrix such that every set of t-column is linearly independent => min distance of code is t+1
