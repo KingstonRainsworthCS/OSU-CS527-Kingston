@@ -250,7 +250,7 @@ Can do addition, subtraction, multiplication and division
 2. Erasure error: 000 -> 0*0
 3. Same with 2, now also correct a normal error. If distance is 2t +1 we can do t error correction
 4. Use picture, triangle inequalities, N(X,Y) >= t+1, look at N(X,X1) N(Y,Y1)
-5. Assymetric (error is always  all + or - from original at every bits) of magnitude l (+-l), use same principle as 4.
+5. Asymmetric (error is always  all + or - from original at every bits) of magnitude l (+-l), use same principle as 4.
 6. singular is possible by parity bits, two error detect via  parity on row or column, miss-corrected at 3 when all 3 are in a grid shape, divide by C(m*n,3)
 7. kinda obvious after looking into cross parity
 
@@ -295,3 +295,25 @@ If you have code word with 1s in i1,i2,is, positions of the linear combination o
 You can derive code word by reverse this process
 
 Suppose we choose an H-matrix such that every set of t-column is linearly independent => min distance of code is t+1
+
+## Week 7
+
+### Midterm examples:
+
+1. Given a box with 5 red and 4 white ball, pick 2:
+  a/ find entropy with first ball replacement:
+  RR -> 5/9 * 5/9 = 25/81
+  RW -> 5/9 * 4/9 = 20/81
+  WR -> 20/81
+  WW -> 16/81
+  H = Sum p*log(1/p)
+  b/ find entropy without replacement:
+  RR -> 5/9 * 4/8 = 20/72
+  RW -> 5/9 * 4/8 = 20/72
+  WR -> 4/9 * 5/8 = 20/72
+  WW -> 4/9 * 3/8 = 12/72
+
+### Linear code cont
+Awww note on constructing orthogonal matrix in lecture
+
+### Hamming code over non binary channel
